@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="theme-toggle-container">
+  <h1>🌗 Dark / Light Theme Toggle</h1>
+  <p>This theme switcher remembers your preference using localStorage.</p>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle" />
+    <span class="slider round"></span>
+  </label>
+</div>
+  <div class="warpper">
+    <div class="container" id="containers">
+        
+      <div class="tabs">
+        <button  id="loginTab" class="active der">Login</button>
+        <button id="registerTab" class="der">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" action="/login" method="post" class="form active">
+        <input
+        id="dark-mode"
+        
+        name="email"
+          type="email"
+          placeholder="Email"
+          required
+          value=""
+        />
+        <input  id="pass" type="password" name="password" placeholder="Password" required />
+        <button type="submit" class="btn" id="submit" >
+          <i class="fa fa-sign-in-alt"></i> Login
+        </button>
+        <p class="or">Or continue with</p>
+        <div   class="socials">
+          <button class="social">G</button>
+          <button class="social">f</button>
+          <button class="social">t</button>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" action="/register" method="post" class="form">
+        <input  class="khan" type="text" name="username" placeholder="Full Name" required />
+        <input  class="khan" type="email" name="email" placeholder="Email" required />
+        <input  class="khan" type="password" name="password" placeholder="Password" required />
+        <input class="khan" type="password" name="confirmPassword" placeholder="Confirm Password" required />
+        <button   type="submit" class="btn" id="submit">
+          <i class="fa fa-user-plus"></i> Register
+        </button>
+        <p class="or">Or sign up with</p>
+        <div class="socials">
+          <button  class="social">G</button>
+          <button class="social">f</button>
+          <button class="social">t</button>
+        </div>
+      </form>
+    </div>
+    <div class="desgin">
+      <img src="img/water-floating.png" class="water" alt="">
+      <img src="img/water-floating-2.png" alt="">
+      <img src="img/arch-removebg-preview.png" alt="">
+      <div class="mockup"></div>
+      
+    </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
